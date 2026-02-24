@@ -1,0 +1,23 @@
+
+> matcha_temp@0.1.0 build
+> next build
+
+⚠ Attempted to load @next/swc-win32-x64-msvc, but an error occurred: \\?\C:\Users\Lenovo\OneDrive\Documents\Match zip\node_modules\@next\swc-win32-x64-msvc\next-swc.win32-x64-msvc.node is not a valid Win32 application.
+\\?\C:\Users\Lenovo\OneDrive\Documents\Match zip\node_modules\@next\swc-win32-x64-msvc\next-swc.win32-x64-msvc.node
+⚠ Warning: Next.js inferred your workspace root, but it may not be correct.
+ We detected multiple lockfiles and selected the directory of C:\Users\Lenovo\package-lock.json as the root directory.
+ To silence this warning, set `turbopack.root` in your Next.js config, or consider removing one of the lockfiles if it's not needed.
+   See https://nextjs.org/docs/app/api-reference/config/next-config-js/turbopack#root-directory for more information.
+ Detected additional lockfiles: 
+   * C:\Users\Lenovo\OneDrive\Documents\Match zip\package-lock.json
+
+  Skipping creating a lockfile at C:\Users\Lenovo\OneDrive\Documents\Match zip\.next\lock because we're using WASM bindings
+▲ Next.js 16.1.6 (Turbopack)
+
+  Creating an optimized production build ...
+⚠ Attempted to load @next/swc-win32-x64-msvc, but an error occurred: \\?\C:\Users\Lenovo\OneDrive\Documents\Match zip\node_modules\@next\swc-win32-x64-msvc\next-swc.win32-x64-msvc.node is not a valid Win32 application.
+\\?\C:\Users\Lenovo\OneDrive\Documents\Match zip\node_modules\@next\swc-win32-x64-msvc\next-swc.win32-x64-msvc.node
+
+> Build error occurred
+Error: `turbo.createProject` is not supported by the wasm bindings.
+    at ignore-listed frames
