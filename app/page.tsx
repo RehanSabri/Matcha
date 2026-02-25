@@ -1,4 +1,5 @@
 import MatchaCanvasAnimation from "@/components/MatchaCanvasAnimation";
+import Navbar from "@/components/Navbar";
 
 export const metadata = {
   title: "Artisanal Iced Matcha Latte",
@@ -8,6 +9,7 @@ export const metadata = {
 export default function Home() {
   return (
     <main className="bg-black text-white selection:bg-[#D4E0D1]/30 selection:text-white min-h-screen font-sans">
+      <Navbar />
       <MatchaCanvasAnimation />
     </main>
   );

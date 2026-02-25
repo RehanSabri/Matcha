@@ -83,7 +83,10 @@ export default function MatchaCanvasAnimation() {
             const iw = img.width;
             const ih = img.height;
 
-            const scale = Math.min(cw / iw, ch / ih);
+            // On mobile, use cover behavior so the cup animation is vertical and fills the screen
+            const isMobile = window.innerWidth < 768;
+            const scale = isMobile ? Math.max(cw / iw, ch / ih) : Math.min(cw / iw, ch / ih);
+
             const w = iw * scale;
             const h = ih * scale;
             const x = (cw - w) / 2;
@@ -172,12 +175,12 @@ export default function MatchaCanvasAnimation() {
                 {/* Text Beat A */}
                 <motion.div
                     style={{ opacity: opacityA, y: yA }}
-                    className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none p-8 text-center"
+                    className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none p-6 md:p-8 text-center"
                 >
-                    <h1 className="text-white/90 text-7xl md:text-[8rem] leading-none font-semibold tracking-tighter mb-6">
+                    <h1 className="text-white/90 text-5xl md:text-[8rem] leading-none font-semibold tracking-tighter mb-4 md:mb-6">
                         BOTANICAL<br />ALCHEMY
                     </h1>
-                    <p className="text-[#D4E0D1]/70 text-lg md:text-2xl max-w-2xl font-light">
+                    <p className="text-[#D4E0D1]/70 text-base md:text-2xl max-w-2xl font-light">
                         Experience the perfect harmony of shade-grown ceremonial matcha and velvet dairy.
                     </p>
                 </motion.div>
@@ -185,12 +188,12 @@ export default function MatchaCanvasAnimation() {
                 {/* Text Beat B */}
                 <motion.div
                     style={{ opacity: opacityB, y: yB }}
-                    className="absolute inset-0 flex flex-col items-start justify-center pointer-events-none p-8 md:p-24"
+                    className="absolute inset-0 flex flex-col items-start justify-center pointer-events-none p-6 md:p-24"
                 >
-                    <h2 className="text-white/90 text-6xl md:text-8xl font-semibold tracking-tighter mb-6">
+                    <h2 className="text-white/90 text-4xl md:text-8xl font-semibold tracking-tighter mb-4 md:mb-6">
                         THE<br />FOUNDATION
                     </h2>
-                    <p className="text-[#D4E0D1]/70 text-lg md:text-2xl max-w-xl font-light">
+                    <p className="text-[#D4E0D1]/70 text-base md:text-2xl max-w-xl font-light">
                         A creamy, chilled canvas awaiting the infusion.
                     </p>
                 </motion.div>
@@ -198,12 +201,12 @@ export default function MatchaCanvasAnimation() {
                 {/* Text Beat C */}
                 <motion.div
                     style={{ opacity: opacityC, y: yC }}
-                    className="absolute inset-0 flex flex-col items-end text-right justify-center pointer-events-none p-8 md:p-24"
+                    className="absolute inset-0 flex flex-col items-end text-right justify-center pointer-events-none p-6 md:p-24"
                 >
-                    <h2 className="text-white/90 text-6xl md:text-8xl font-semibold tracking-tighter mb-6">
+                    <h2 className="text-white/90 text-4xl md:text-8xl font-semibold tracking-tighter mb-4 md:mb-6">
                         THE<br />DIFFUSION
                     </h2>
-                    <p className="text-[#D4E0D1]/70 text-lg md:text-2xl max-w-xl font-light w-full text-right">
+                    <p className="text-[#D4E0D1]/70 text-base md:text-2xl max-w-xl font-light w-full text-right">
                         Watch the vivid green strike the milk, creating complex, dynamic fluid gradients.
                     </p>
                 </motion.div>
@@ -211,15 +214,15 @@ export default function MatchaCanvasAnimation() {
                 {/* Text Beat D */}
                 <motion.div
                     style={{ opacity: opacityD, y: yD }}
-                    className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none p-8 text-center"
+                    className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none p-6 md:p-8 text-center"
                 >
-                    <h2 className="text-white/90 text-7xl md:text-[8rem] leading-none font-semibold tracking-tighter mb-6">
+                    <h2 className="text-white/90 text-5xl md:text-[8rem] leading-none font-semibold tracking-tighter mb-4 md:mb-6">
                         TASTE THE CRAFT
                     </h2>
-                    <p className="text-[#D4E0D1]/70 text-lg md:text-2xl max-w-2xl font-light mb-12">
+                    <p className="text-[#D4E0D1]/70 text-base md:text-2xl max-w-2xl font-light mb-8 md:mb-12">
                         Masterfully layered. Uncompromisingly bold.
                     </p>
-                    <button className="pointer-events-auto border border-[#D4E0D1]/40 text-[#D4E0D1] px-10 py-4 rounded-full hover:bg-[#D4E0D1]/10 hover:border-[#D4E0D1]/60 transition-all uppercase tracking-[0.2em] text-sm">
+                    <button className="pointer-events-auto border border-[#D4E0D1]/40 text-[#D4E0D1] px-8 md:px-10 py-3 md:py-4 rounded-full hover:bg-[#D4E0D1]/10 hover:border-[#D4E0D1]/60 transition-all uppercase tracking-[0.2em] text-xs md:text-sm">
                         Discover Our Menu
                     </button>
                 </motion.div>
